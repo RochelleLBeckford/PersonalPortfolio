@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- & ---------------- Link styelsheet --------------------- -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!-- & ----------------- Nav Bar ---------------------------- -->
+    <!-- ~ use this id to target this navbar with the stylesheet -->
+    <nav id="desktop-nav">
+        <div class="logo">Rochelle L Beckford</div>
+        <div>
+            <ul class="nav-links">
+                <!-- 
+                    & this link will go to each section of the page once clicked leading w/ a # 
+                        ~ each section wiill have it's own id tag
+                        ~ if click each link will notice in the url is updating -> means that the links are working
+                -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- & ---------------- Hamburger section of navbar --------------------- -->
+    <nav id="hamburger-nav">
+        <div class="logo">Rochelle L Beckford</div>
+        <div class="hamburger-menu">
+            <!-- & create an on click for the hamburger menu -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!-- ~ lines of the hamburger menu -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- & links that will be opened with the onclick function -->
+            <div class="menu-links">
+                <!-- ~ when click any link want the menu to close -->
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- & -------- Sections on page -> About Me, Experience, Projects, Contact ------ -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Rochelle L Beckford profile picture.">
+        </div>
+
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Rochelle L Beckford</h1>
+            <p class="section__text__p2">Frontend Developer</p>
+
+            <div class="btn-container">
+                <!-- ~ onclick targets the whole page -->
+                <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./assets/Rochelle Lee Beckford Resume.pdf')"
+                >
+                Download Resume
+                </button>
+
+                <!-- 
+                    ~ onclick sends the user to the contact section of the webpage
+                    ~ location:href will replace the current page url with the link clicked
+                -->
+                <button 
+                    class="btn btn-color-1" 
+                    onclick="location.href='./#contact'"
+                >
+                Contact Info
+                </button> 
+            </div>
+
+            <div id="socials-container">
+                <!-- ~ onclick will send user to my linkedin profile once clicked -->
+                <img src="./assets/linkedin.png" 
+                alt="My LinkedIn Profile."
+                class="icon"
+                onclick="window.open('https://www.linkedin.com/in/rochelle-l-beckford/')" 
+                >
+
+                <!-- ~ onclick will send user to my github profile once clicked -->
+                <!-- onclick="location.href='https://github.com/RochelleLBeckford/'" -->
+                <img src="./assets/github.png" 
+                alt="My GitHUb Profile." 
+                class="icon" 
+                onclick="window.open('https://github.com/RochelleLBeckford/')"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- & ------------------ About Section -------------------- -->
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img 
+                    src="./assets/about-pic.png" 
+                    alt="Rochelle L Beckford Grey Profile Picture." 
+                    class="about-pic"
+                >
+            </div>
+
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img 
+                            src="./assets/experience.png" 
+                            alt="Experience Icon." 
+                            class="icon"
+                        >
+
+                        <h3>Experience</h3>
+                        <p>1+ years <br>Frontend Development</p>
+                    </div>
+
+                    <div class="details-container">
+                        <img 
+                            src="./assets/education.png" 
+                            alt="Education Icon." 
+                            class="icon" 
+                        >
+
+                        <h3>Education</h3>
+                        <p>Coding Dojo - Software Development Program Certificate of Achievement<br>Competencies in Web Fundamentals, Python, Javascript, JAVA</p>
+                    </div>
+                </div>
+                <!-- <br> -->
+                <div class="text-container">
+                    <p>
+                        <br>
+                        Hello, my name is Rochelle and I am a Frontend Web Developer with a background in Accounting. Through several years of experience in
+                        Accounting, I have learned how vital user-friendly and efficient systems can be in moving one’s day-to-day progressively
+                        forward in a positive direction. However, I discovered a new passion for coding which led to me wanting to make
+                        technology more easily accessible to everyone. I chose to embark on this new journey and pursue it without looking back.
+                        <br><br>
+                        I have experience in building web applications from scratch and integrating
+                        them with existing systems. A self-motivated leader with strong problem-solving skills cultivated through my years of
+                        diverse work experience. My goal is to use my diverse skillset and experience to deliver innovative software solutions
+                        to various businesses and individuals in the tech industry to help them thrive 
+                        <br><br>
+                        I am elated to say that I successfully completed the Bootcamp and emerged with a stronger foundation in coding.
+                        Henceforth, I have continued working as a Frontend Developer and enhancing my skills through various projects and collaborations.
+                        I am overjoyed to continue to deepen my growth and knowledge on this new career path.
+                        <!-- Still, coding is not my only passion! When I am not coding you can find me usually spending time with my phenomenal
+                        family, learning new things (I am currently learning Korean), building out DIY projects, cooking, and reading. Oh, and I
+                        am a big fan of anime, video games, as well as completing puzzles.
+                    </p> -->
+                </div>
+            </div>
+        </div>
+        <!-- ~ Arrow icon will take user to the next section of the page -->
+        <img 
+            src="./assets/arrow.png" 
+            alt="Arrow Icon."
+            class="icon arrow"
+            onclick="location.href='./#experience'"
+        >
+    </section>
+
+    <!-- & -------------------- Experience Section ------------------------- -->
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <!-- ~ -------------- Frontend skill set --------------------- -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>React</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>Bootstrap</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>Trello</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>TypeScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ~ ------------ Backend skill set ----------- -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>MySQL</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>Node JS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>Express JS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>Git</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        
+                        <article>
+                            <img 
+                                src="./assets/checkmark.png" 
+                                alt="Experience Icon."
+                                class="icon"
+                            >
+                            <div>
+                                <h3>JAVA</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img 
+            src="./assets/arrow.png" 
+            alt="Arrow Icon." 
+            class="icon arrow" 
+            onclick="location.href='./#projects'"
+        >
+    </section>
+
+    <!-- & ----------------- Project Section ---------------------- -->
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <!-- ~ ----------------------- Project One ----------------------- -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/project-1.png"
+                            alt="Password Requirements Project."
+                            class="project-img"
+                        >
+                    </div>
+                
+                    <h2 class="experience-sub-title project-title">Project One</h2>
+                
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://github.com/RochelleLBeckford/PasswordValidationCheck')"
+                            >
+                            <!-- ~ utilize this onclick to open the link in the current tab -->
+                            <!-- onclick="location.href='https://github.com/RochelleLBeckford/PasswordValidationCheck'" -->
+                            GitHub
+                        </button>
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://ro-password-validations-app.netlify.app')"
+                        >
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ~ -------------------- Project Two ----------------------- -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/project-2.png"
+                            alt="Weather App Project."
+                            class="project-img"
+                        >
+                    </div>
+                
+                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://github.com/RochelleLBeckford/WeatherApp')"
+                            >
+                            GitHub
+                        </button>
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://ro-weather-app.netlify.app')"
+                        >
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ~ ------------------- Project Three --------------------- -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img
+                            src="./assets/project-3.png"
+                            alt="Modern Login Page Design Project."
+                            class="project-img"
+                        >
+                    </div>
+                
+                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://github.com/RochelleLBeckford/ModernLoginPageDesign')"
+                        >
+                            GitHub
+                        </button>
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="window.open('https://ro-modern-login-page-design-app.netlify.app')"
+                        >
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img 
+            src="./assets/arrow.png" 
+            alt="Arrow Icon." 
+            class="icon arrow" 
+            onclick="location.href='./#contact'"
+        >
+    </section>
+
+    <!-- & ----------------- Contact Section ---------------------- -->
+    <section id="contact">
+        <p class="section__text__p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+
+        <!-- ~ ----------------------- Upper Container --------------------- -->
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img 
+                    src="./assets/email.png" 
+                    alt="Email Icon." 
+                    class="icon contact-icon email-icon"
+                >
+                <p>
+                    <!-- ~ when user clicks this it will open their local email app. -->
+                    <a href="mailto:r.beckford@me.com">r.beckford@me.com</a>
+                </p>
+            </div>
+
+            <div class="contact-info-container">
+                <img 
+                    src="./assets/linkedin.png" 
+                    alt="LinkedIn Icon." 
+                    class="icon contact-icon"
+                >
+                <p>
+                    <!-- 
+                        ~ when user clicks this it will open their local email app. 
+                        ~ adding target="_blank" attribute to the anchor tag allows for the link clicked by the user to open in a new browser tab
+                    -->
+                    <a href="https://www.linkedin.com/in/rochelle-l-beckford/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- & ----------------- Footer Section ---------------------- -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <!-- ~ have everthing here that is in the desktop nav -->
+                <ul class="nav-links">
+                    <!-- 
+                                    & this link will go to each section of the page once clicked leading w/ a # 
+                                        ~ each section wiill have it's own id tag
+                                        ~ if click each link will notice in the url is updating -> means that the links are working
+                                -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ~ copyright symbol -->
+        <p>Copyright &#169; 2023 Rochelle L Beckford. All Rights Reserved</p>
+    </footer>
+
+    <!-- & ----------------------- Link js file ------------------------- -->
+    <script src="script.js"></script>
+</body>
+</html>

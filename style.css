@@ -1,0 +1,464 @@
+/* & ------------------ Import Font From Google -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    /* ~ Reset page */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    /* ~ once the links are links are selected it will not instanlt go to the different sections but scroll down smoothly */
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* & Transition */
+a, 
+.btn {
+    /* ~ whenever click links for button there will be a transition between two styles and not be instantly */
+    transition: all 300ms ease;
+}
+
+/* & ------------------------- Desktop Navbar -------------------------- */
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    /* ~ whatever the view height of this screen is this will set it to take a specific height */
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    /* ~ remove the bullet points in the links */
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    /* ~ removes the decoration from the hyperlink */
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    /* ~ hover over the links want the color to change to gray */
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181
+    );
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* & ---------------------------- Hamburger Navbar --------------------------- */
+/* ~ setup media queries so can see hamburger menu when styling it */
+#hamburger-nav {
+    /* ~ when in a desktop view the hamburger will not appear */
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    /* 
+    ~ make hamburger menu turn into an x to close once make function 
+    ~ screen size less than max-width hamburger menu will appear -> greater the hamburger menu will disappear and links will appear on the navbar
+    */
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* ~ target the first span element */
+.hamburger-icon.open span:first-child {
+    /* ~ transforming the line by rotating it into an X and moving it slightly in both x and y directions*/
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+/* ~ target the 2nd span element */
+.hamburger-icon.open span:nth-child(2) {
+    /* ~ removing the 2nd line completly*/
+    opacity: 0;
+}
+
+/* ~ target the last span element */
+.hamburger-icon.open span:last-child {
+    /* ~ transforming the line by rotating it into an X and moving it slightly in both x and y directions*/
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* & --- Section of the webpage -> Profile, About Me, Experience, Projects, Contact ------ */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    /* ~ make sure things are not overlapping */
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+    padding-top: 40px;
+}
+
+/* & ------------------- Profile Section ---------------------- */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container img {
+    /* border-radius: 5px 20px 5px; */
+    border-radius: 100px;
+    box-shadow: 10px 10px 10px rgb(85, 85, 85);
+}
+
+.section__pic-container {
+    display: flex;
+    height: 420px;
+    width: 420px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* * ------------------- Icons ------------------- */
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* * ------------------- Buttons ----------------- */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    /* width: 8rem; */
+    width: 9rem;
+    border-radius: 3rem;
+    box-shadow: 5px 5px 5px rgb(85, 85, 85);
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background:none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* & --------------------- About Section ----------------------- */
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 100px;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 10px; */
+    margin-bottom: 50px;
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+/* ! come back to this */
+.text-container {
+    padding-bottom: 3rem;
+}
+
+.arrow {
+    /* ~ using this means that the arrows position is absolute to the 1st parent element that has the users position relative
+        -> since haven't yet made the experience section have the position of relative it is going back to the main profile section section */
+    position: absolute;
+    /* ~ placing arrow -5 from the right corner */
+    right: -5rem;
+    /* ~ 2.5 rem up from the bottom */
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    box-shadow: 10px 10px 10px rgb(85, 85, 85);
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 420px;
+    width: 420px;
+    margin: auto 0;
+}
+
+/* & ------------------------- Experience Section ------------------------- */
+/* ~ adding this solves the error of the arrow going back to the main profile section instead of appearing in the experience section */
+#experience {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    /* ~ if the elements are bigger than the container they will wrap under each other to fit the width of the container */
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+.article {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+/* & ------------------------ Projects Section -------------------- */
+#projects {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* & ------------------------- Contact Section ---------------------- */
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 73vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+/* ~ extra styling for the icon images so they will be the same size */
+.email-icon {
+    height: 2.6rem;
+}
+
+/* & ----------------- Footer Section --------------------- */
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}

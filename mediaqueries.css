@@ -1,0 +1,129 @@
+/* & utilized the inspect tool to view how the page would look on various screen sizes and what steps to take to make it more responsive */
+@media screen and (max-width: 1400px) {
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+
+
+    .about-containers {
+        flex-wrap: wrap;
+    }
+}
+
+/* & when the screen size is lower than 1200px the desktop nav will disappear and instead want hamburger menu to display */
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+    }
+
+    #experience, 
+    .experience-details-container {
+        margin-top: 2rem;
+    }
+
+    #profile, 
+    .section-container {
+        display: block;
+    }
+
+    /* ~ make it disappear once it gets to 1200 px */
+    .arrow {
+        display: none;
+    }
+
+    section,
+    .section-container {
+        height: fit-content;
+    }
+
+    section {
+        margin: 0 5%;
+    }
+
+    .section__pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
+    .about-containers {
+        margin-top: 0;
+    }
+}
+
+/* & for even smaller screens */
+@media screen and (max-width: 600px) {
+    #contact, 
+    footer {
+        height: 40vh;
+    }
+
+    #profile {
+        height: 83vh;
+        margin-bottom: 0;
+    }
+
+    article {
+        font-size: 1rem;
+    }
+
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    .about-containers, 
+    .contact-info-upper-container, 
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    .contact-info-container {
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .contact-info-container p,
+    .nav-links li a {
+        font-size: 1rem;
+    }
+
+    .experience-sub-title {
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .section__pic-container {
+        width: auto;
+        /* ~ vw -> view width */
+        height: 46vw;
+        justify-content: center;
+    }
+
+    .section__text__p2 {
+        font-size: 1.24rem;
+    }
+
+    .title { 
+        font-size: 2rem;
+    }
+
+    .text-container {
+        /* ~ justify the text to take the whole width of the container */
+        text-align: justify;
+    }
+}
