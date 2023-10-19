@@ -29,4 +29,4 @@
 
 ---
 
-- [ ] Link for the web application:
+- [ ] Link for the web application: https://rlb-portfolio.netlify.app/#projects
